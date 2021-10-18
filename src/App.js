@@ -6,6 +6,8 @@ import Contact from './components/Contact/Contact';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Navigation from './components/Navigation/Navigation';
+import Plans from './components/Plans/Plans';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
 
 function App() {
@@ -31,6 +33,12 @@ function App() {
           </Route>
           <Route path="/login">
             <Login></Login>
+          </Route>
+          <Route path="/plans">
+            <Plans></Plans>
+          </Route>
+          <Route path="/service/:title">
+            <ServiceDetails></ServiceDetails>
           </Route>
         </Switch>
       </BrowserRouter>

@@ -2,7 +2,8 @@ import React from 'react';
 import { Container, Navbar } from 'react-bootstrap';
 import { NavLink } from 'react-router-dom';
 import logo from "../../images/logo.png";
-import './Navigation.css'
+import './Navigation.css';
+import { NavHashLink } from 'react-router-hash-link';
 
 const Navigation = () => {
     return (
@@ -22,34 +23,42 @@ const Navigation = () => {
                     <Navbar.Toggle />
                     <Navbar.Collapse className="justify-content-end">
                         <div id="nav-responsive">
-                            <NavLink
+                            <NavHashLink
                                 className="text-light text-decoration-none mx-3 nav-item nav-links"
-                                to="/home"
+                                to="/home#home"
                                 activeClassName="primary-text border-bottom"
                             >
                                 Home
-                            </NavLink>
-                            <NavLink
+                            </NavHashLink>
+                            <NavHashLink
+                                smooth
                                 className="text-light text-decoration-none mx-3 nav-item nav-links"
-                                to="/services"
+                                to="/home#services"
                                 activeClassName="primary-text border-bottom"
                             >
                                 Services
-                            </NavLink>
-                            <NavLink
+                            </NavHashLink>
+                            <NavHashLink
                                 className="text-light text-decoration-none mx-3 nav-item nav-links"
-                                to="/contact"
+                                to="/home#plans"
+                                activeClassName="primary-text border-bottom"
+                            >
+                                Plans
+                            </NavHashLink>
+                            <NavHashLink
+                                className="text-light text-decoration-none mx-3 nav-item nav-links"
+                                to="/home#contact"
                                 activeClassName="primary-text border-bottom"
                             >
                                 Contact
-                            </NavLink>
-                            <NavLink
+                            </NavHashLink>
+                            <NavHashLink
                                 className="text-light text-decoration-none mx-3 nav-item nav-links"
-                                to="/about"
+                                to="/home#about"
                                 activeClassName="primary-text border-bottom"
                             >
                                 About
-                            </NavLink>
+                            </NavHashLink>
                             <NavLink
                                 className="primary-background button text-light text-decoration-none px-4 py-2 rounded-pill nav-item"
                                 to="/login"

@@ -1,8 +1,16 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
+import { NavLink, useHistory  } from 'react-router-dom';
 
-const Service = ({key,service}) => {
-    const {title,short_desc,img}=service;
+const Service = ({service}) => {
+    const {key,title,short_desc,img}=service;
+    let history = useHistory();
+    const handleDetailsClick=(e)=>{
+        e.preventDefault();
+        history.push('/service/'+key)
+    }
+
+
     return (
         <div className="col">
             <div className="card bg-black card-border h-100">
@@ -17,12 +25,12 @@ const Service = ({key,service}) => {
                     <p>{short_desc}</p>
                 </div>
                 <div className="d-flex justify-content-center total font-weight-bold p-3">
-                    <NavLink
+                    <Button
                         className="primary-background button text-light text-decoration-none px-4 py-2 rounded-pill nav-item"
-                        to="/"
+                        onClick={handleDetailsClick}
                     >
                         <i className="fas fa-info-circle"></i> Details
-                    </NavLink>
+                    </Button>
                 </div>
             </div>
         </div>
