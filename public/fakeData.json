@@ -1,0 +1,44 @@
+[
+    {
+        "key":"fat-burn",
+        "title":"Fat Burn",
+        "short_desc":"Your body tends to hoard calories as fat to keep you alive and safe. The challenge is learning how to get rid of that extra fat.",
+        "desc":" If you feel like any extra calories you eat go straight to your belly or thighs, you're not imagining things. Those are usually the areas where you store fat because of your genes, hormones, age, lifestyle, and other factors. Your body tends to hoard calories as fat to keep you alive and safe. The challenge is learning how to get rid of that extra fat.",
+        "img":"https://i.ibb.co/LrLv93X/fatburn.jpg"
+    },
+    {
+        "key":"stretching",
+        "title":"Stretching",
+        "short_desc":"Stretching keeps the muscles flexible, strong, and healthy, and we need that flexibility to maintain a range of motion in the joints.",
+        "desc":"Stretching keeps the muscles flexible, strong, and healthy, and we need that flexibility to maintain a range of motion in the joints. Without it, the muscles shorten and become tight. Then, when you call on the muscles for activity, they are weak and unable to extend all the way. That puts you at risk for joint pain, strains, and muscle damage.",
+        "img":"https://i.ibb.co/NFVdYBL/stretching.jpg"
+    },
+    {
+        "key":"weight-loss",
+        "title":"Weight Loss",
+        "short_desc":"Being overweight or obese can lead to a range of health problems. Although many different “fad” diets are available, a balanced lifestyle and nutritious diet are the key to healthful living and better weight control.",
+        "desc":"Being overweight or obese can lead to a range of health problems. Although many different “fad” diets are available, a balanced lifestyle and nutritious diet are the key to healthful living and better weight control. People gain weight by consuming more energy than they burn, so consuming fewer calories, or energy, can help. However, other factors play a role, such as genetic factors, metabolism, hormones, the type of food you eat, your body type, and lifestyle.",
+        "img":"https://i.ibb.co/hDsD9pr/weightloss.jpg"
+    },
+    {
+        "key":"body-building",
+        "title":"Body Building",
+        "short_desc":"A frequently asked question we get is how do you create a bodybuilding diet? We teach bodybuilders how to build their own bodybuilding meal plan.",
+        "desc":"A frequently asked question we get is how do you create a bodybuilding diet? We teach bodybuilders how to build their own bodybuilding meal plan. Learn how having an effective diet, training, and recovery plan are key components to getting amazing body transformation results. Is your goal to get “see your abs” lean? Would you like to fill out your t-shirt but still have a waspish waist? Do you want to look like you’re flexing without actually flexing? To get that jacked you need to get lean, and I mean LEAN. 10% to be exact. Forget for a moment the braggarts who claim single digit body fat levels. Yes, there are some in this world who walk around at 8, 6, even 4% body fat levels, but not many. If you’re 10% you’re pretty flippin lean. We'll teach you how to get there.",
+        "img":"https://i.ibb.co/B4WW8hV/bodybuilding.jpg"
+    },
+    {
+        "key":"top-of-the-line-equipment",
+        "title":"Top of the line Equipment",
+        "short_desc":"Gymster is proud to hold top of the line Technogym equipment.",
+        "desc":"Gymster is proud to hold top of the line Technogym equipment. We make sure that we have all the equipment necessary for a fantastic workout no matter what your style may be. We have a variety of dumbbells that go up to 110lbs, 4 squat racks and 2 smith machines for our heavy lifters. For our cardio lovers we are equipped with a multitude of treadmills, ellipticals, stairmasters and rowing machines. All of our electronic machines include a touch screen where you can watch videos, listen to music, or search the internet. We also have the option to travel virtually so if you feel like running on the boardwalk in sunny San Francisco, or through the woods, you can!",
+        "img":"https://i.ibb.co/zSgN8Ch/top-equipments.jpg"
+    },
+    {
+        "key":"strength-training",
+        "title":"Strength Training",
+        "short_desc":"Anyone, at any fitness level, can and should strength train. And it doesn't have to take hours at the gym to see results.",
+        "desc":"No matter your age or athletic ability, strength training is the key to flexibility, mobility, improved performance and lower injury risk. Anyone, at any fitness level, can and should strength train. And it doesn't have to take hours at the gym to see results. We’ll teach you the basics of strength training in the comfort of your own home. It’ll take only nine minutes of exertion to complete a full-body strength-building workout. Grab a towel and get ready to feel strong.",
+        "img":"https://i.ibb.co/vjNwcpW/strength.jpg"
+    }
+]
