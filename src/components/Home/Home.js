@@ -4,7 +4,6 @@ import carousel2 from '../../images/carousel-2.jpg';
 import carousel3 from '../../images/carousel-3.jpg';
 import carousel4 from '../../images/carousel-4.jpg';
 import About from '../About/About';
-import Contact from '../Contact/Contact';
 import Plans from '../Plans/Plans';
 import Services from '../Services/Services';
 import './Home.css';
@@ -56,8 +55,8 @@ const Home = () => {
             </Carousel>
             <Services></Services>
             <Plans></Plans>
-            <Contact></Contact>
             <About></About>
+            <hr />
         </div>
     );
 };

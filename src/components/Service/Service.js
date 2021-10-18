@@ -1,6 +1,6 @@
 import React from 'react';
 import { Button } from 'react-bootstrap';
-import { NavLink, useHistory  } from 'react-router-dom';
+import {  useHistory  } from 'react-router-dom';
 
 const Service = ({service}) => {
     const {key,title,short_desc,img}=service;
@@ -13,7 +13,7 @@ const Service = ({service}) => {
 
     return (
         <div className="col">
-            <div className="card bg-black card-border h-100">
+            <div className="services-card card bg-black card-border h-100">
                 <img src={img} className="w-100 image-border gray-scale" alt="working out" />
                 <div className="about-product text-center mt-2 p-3">
                     <div>

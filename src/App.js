@@ -3,6 +3,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
 import Contact from './components/Contact/Contact';
+import Footer from './components/Footer/Footer';
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Navigation from './components/Navigation/Navigation';
@@ -41,6 +42,7 @@ function App() {
             <ServiceDetails></ServiceDetails>
           </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

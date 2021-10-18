@@ -47,17 +47,17 @@ const Navigation = () => {
                             </NavHashLink>
                             <NavHashLink
                                 className="text-light text-decoration-none mx-3 nav-item nav-links"
-                                to="/home#contact"
-                                activeClassName="primary-text border-bottom"
-                            >
-                                Contact
-                            </NavHashLink>
-                            <NavHashLink
-                                className="text-light text-decoration-none mx-3 nav-item nav-links"
                                 to="/home#about"
                                 activeClassName="primary-text border-bottom"
                             >
                                 About
+                            </NavHashLink>
+                            <NavHashLink
+                                className="text-light text-decoration-none mx-3 nav-item nav-links"
+                                to="/contact"
+                                activeClassName="primary-text border-bottom"
+                            >
+                                Contact
                             </NavHashLink>
                             <NavLink
                                 className="primary-background button text-light text-decoration-none px-4 py-2 rounded-pill nav-item"

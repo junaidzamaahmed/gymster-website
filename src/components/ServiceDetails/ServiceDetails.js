@@ -24,7 +24,7 @@ const ServiceDetails = () => {
                 <p className="d-flex justify-content-center container my-4">{service?.desc}</p>
                 <div className="d-flex justify-content-center">
                 <NavLink
-                    className="primary-background button text-light text-decoration-none px-4 py-2 rounded-pill nav-item"
+                    className="mb-5 primary-background button text-light text-decoration-none px-4 py-2 rounded-pill nav-item"
                     to="/home"
                 ><i className="fas fa-home"></i> Return Home
                 </NavLink>

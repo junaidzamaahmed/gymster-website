@@ -9,7 +9,7 @@
 .image-border{
     border-radius: 10px;
 }
-.card:hover{
+.services-card:hover{
     transition: transform 0.5s;
     transform: scale(1.03);
     border: 5px solid rgb(227, 28, 37);
