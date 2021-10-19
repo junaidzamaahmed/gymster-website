@@ -8,14 +8,16 @@ initializeAuthentication()
 const useFirebase = () => {
     // User Hook
     const [user, setUser] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
+
     const auth = getAuth();
     const googleProvider = new GoogleAuthProvider();
 
     // Email Password Account register
     const createAccount = (email, password, name) => {
+        setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
-                // Signed in 
                 setUser(result.user);
                 updateUserName(name);
                 // console.log(result.user);
@@ -24,7 +26,8 @@ const useFirebase = () => {
             .catch((error) => {
                 swal("Oops!", `${error.message}`, "error");
                 // ..
-            });
+            })
+            .finally(() => { setIsLoading(false) })
     }
 
     // Update name
@@ -40,6 +43,7 @@ const useFirebase = () => {
 
     // Email Password Sign In
     const signIn = (email, password) => {
+        setIsLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 // Signed in 
@@ -48,12 +52,14 @@ const useFirebase = () => {
             })
             .catch((error) => {
                 swal("Oops!", `${error.message}`, "error");
-            });
+            })
+            .finally(() => { setIsLoading(false) })
     }
 
 
     // Google Sign In
     const signInWithGoogle = () => {
+        setIsLoading(true)
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user)
@@ -62,21 +68,25 @@ const useFirebase = () => {
             .catch(error => {
                 swal("Oops!", `${error.message}`, "error");
             })
+            .finally(() => { setIsLoading(false) })
     }
 
     // Sign Out
     const logOut = () => {
+        setIsLoading(true)
         signOut(auth).then(() => {
             // Sign-out successful.
             setUser({})
             swal("Great!", "You've successfully logged out!", "success");
         }).catch((error) => {
             // An error happened.
-        });
+        })
+            .finally(() => { setIsLoading(false) })
     }
 
     // Observer
     useEffect(() => {
+        setIsLoading(true)
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUser(user);
@@ -84,10 +94,11 @@ const useFirebase = () => {
             else {
                 setUser({})
             }
+            setIsLoading(false)
         });
     }, [])
 
-    return { user, signInWithGoogle, logOut, createAccount, signIn , setUser}
+    return { user, signInWithGoogle, logOut, createAccount, signIn, setUser, isLoading }
 };
 
 export default useFirebase;

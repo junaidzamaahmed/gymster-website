@@ -9,6 +9,7 @@ import Navigation from './components/Navigation/Navigation';
 import NotFound from './components/NotFound/NotFound';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import AuthProvider from './context/AuthProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 function App() {
   return (
@@ -29,9 +30,9 @@ function App() {
             <Route path="/login">
               <Login></Login>
             </Route>
-            <Route path="/service/:title">
+            <PrivateRoute path="/service/:title">
               <ServiceDetails></ServiceDetails>
-            </Route>
+            </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>
             </Route>
