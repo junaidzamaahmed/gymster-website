@@ -6,7 +6,7 @@ import { NavHashLink } from "react-router-hash-link";
 
 const Footer = () => {
     return (
-        <div>
+        <div className="footer-position">
             <footer className="footer bg-black">
                 <div className="container">
                     <div className="row">

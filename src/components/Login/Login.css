@@ -1,0 +1,7 @@
+.login-page-height{
+    min-height: 90vh;
+}
+.login-box{
+    min-height: 500px;
+    max-width: 90%;
+}
