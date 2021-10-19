@@ -24,10 +24,10 @@ const Footer = () => {
                             <div className="footer-widget">
                                 <h6>Social Media</h6>
                                 <ul>
-                                    <li><a className="footer-anchor" target="_blank" href="https://www.facebook.com/ItzXunaid/"><i className="fab fa-facebook-f"></i> Facebook</a></li>
-                                    <li><a className="footer-anchor" target="_blank" href="https://www.instagram.com/zamaa.aa/"><i className="fab fa-twitter"></i> Twitter</a></li>
-                                    <li><a className="footer-anchor" target="_blank" href="https://www.instagram.com/zamaa.aa/"><i className="fab fa-instagram"></i> Instagram</a></li>
-                                    <li><a className="footer-anchor" target="_blank" href="https://github.com/junaidzamaahmed/"><i className="fab fa-github"></i> Github</a></li>
+                                    <li><a className="footer-anchor" target="_blank" rel="noreferrer" href="https://www.facebook.com/ItzXunaid/"><i className="fab fa-facebook-f"></i> Facebook</a></li>
+                                    <li><a className="footer-anchor" target="_blank" rel="noreferrer" href="https://www.instagram.com/zamaa.aa/"><i className="fab fa-twitter"></i> Twitter</a></li>
+                                    <li><a className="footer-anchor" target="_blank" rel="noreferrer" href="https://www.instagram.com/zamaa.aa/"><i className="fab fa-instagram"></i> Instagram</a></li>
+                                    <li><a className="footer-anchor" target="_blank" rel="noreferrer" href="https://github.com/junaidzamaahmed/"><i className="fab fa-github"></i> Github</a></li>
 
                                 </ul>
                             </div>
@@ -67,7 +67,7 @@ const Footer = () => {
                         <div className="col-lg-12 text-center">
                             <div className="footer-copyright-text">
                                 <p className="footer-p">Copyright &copy; 2021 All rights reserved | This website is made with <i className="fa fa-heart-o" arial-hidden="true"></i> {' '}
-                                    by <a target="_blank" className="footer-anchor" href="https://www.instagram.com/zamaa.aa/">Junaid Ahmed Zama</a></p>
+                                    by <a target="_blank" rel="noreferrer" className="footer-anchor" href="https://www.instagram.com/zamaa.aa/">Junaid Ahmed Zama</a></p>
                             </div>
                         </div>
                     </div>
