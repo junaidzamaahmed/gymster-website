@@ -6,7 +6,7 @@ import './Login.css';
 
 
 const Login = () => {
-    const { signInWithGoogle } = useAuth();
+    const { signInWithGoogle, createAccount, signIn } = useAuth();
 
     const [isLogin, setIsLogin] = useState(false);
     const [email, setEmail] = useState('');
@@ -27,7 +27,12 @@ const Login = () => {
     }
     const handleSubmit = e => {
         e.preventDefault()
-        console.log(email,password,name)
+        if(isLogin){
+            createAccount(email,password,name)
+        }
+        else{
+            signIn(email,password)
+        }
     }
     return (
         <div className="d-flex justify-content-center align-items-center login-page-height">
