@@ -8,6 +8,8 @@ import Login from './components/Login/Login';
 import Navigation from './components/Navigation/Navigation';
 import NotFound from './components/NotFound/NotFound';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import Submitted from './components/Submitted/Submitted';
+import Subscribed from './components/Subscribed/Subscribed';
 import AuthProvider from './context/AuthProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
 
@@ -32,6 +34,12 @@ function App() {
             </Route>
             <PrivateRoute path="/service/:title">
               <ServiceDetails></ServiceDetails>
+            </PrivateRoute>
+            <PrivateRoute path="/submitted">
+              <Submitted></Submitted>
+            </PrivateRoute>
+            <PrivateRoute path="/subscribed">
+              <Subscribed></Subscribed>
             </PrivateRoute>
             <Route path="*">
               <NotFound></NotFound>

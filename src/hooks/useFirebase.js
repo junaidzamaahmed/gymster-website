@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, updateProfile, signInWithEmailAndPassword } from "firebase/auth";
 import initializeAuthentication from '../Firebase/firebase.init';
 import swal from 'sweetalert';
+import { useHistory } from 'react-router';
 
 // Initializing Firebase
 initializeAuthentication()
@@ -14,7 +15,7 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
 
     // Email Password Account register
-    const createAccount = (email, password, name) => {
+    const createAccount = (email, password, name, redirected_url) => {
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
+import { useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
@@ -12,6 +13,9 @@ const Login = () => {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
+
+    const location = useLocation();
+    const redirected_url = location.state?.from || '/'
 
     const toggleLogin = (e) => {
         setIsLogin(e.target.checked)
@@ -28,7 +32,7 @@ const Login = () => {
     const handleSubmit = e => {
         e.preventDefault()
         if(isLogin){
-            createAccount(email,password,name)
+            createAccount(email,password,name,redirected_url)
         }
         else{
             signIn(email,password)
@@ -52,7 +56,7 @@ const Login = () => {
 
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
-                        <Form.Control onChange={handlePasswordInput} className="bg-black rounded-pill text-light" type="password" placeholder="Password" />
+                        <Form.Control required onChange={handlePasswordInput} className="bg-black rounded-pill text-light" type="password" placeholder="Password" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicCheckbox">
                         <Form.Check onChange={toggleLogin} type="checkbox" label="New user?" />
