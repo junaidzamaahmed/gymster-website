@@ -3,8 +3,11 @@ import { Button } from 'react-bootstrap';
 import {  useHistory  } from 'react-router-dom';
 
 const Service = ({service}) => {
+    // Details Destructure
     const {key,title,short_desc,img}=service;
     let history = useHistory();
+
+    // Details click redirected
     const handleDetailsClick=(e)=>{
         e.preventDefault();
         history.push('/service/'+key)

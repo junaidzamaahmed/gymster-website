@@ -5,6 +5,7 @@ import useServices from '../../hooks/useServices';
 import NotFound from '../NotFound/NotFound';
 
 const ServiceDetails = () => {
+    // Params extraction
     const { title } = useParams();
     const { services } = useServices();
     const service = services.find(srvc => srvc.key === title)

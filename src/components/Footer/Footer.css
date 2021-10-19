@@ -1,3 +1,4 @@
+/* Footer Para styles */
 .footer-p{
   font-size: 15px;
   color: #3d3d3d;
@@ -5,6 +6,8 @@
   line-height: 25px;
   margin: 0 0 15px 0;
 }
+
+/* Footer Links */
 .footer-anchor{
   text-decoration: none;
 }
@@ -12,6 +15,7 @@ ul{
   padding-left: 0;
 }
 
+/* Hover and Focus styles */
 input:focus{
   outline: none;
 }
@@ -22,7 +26,7 @@ input:focus{
   color: #ffffff;
 }
 
-
+/* Footer General Styles */
 .footer{
   background: #111111;
   padding-top: 70px;
@@ -37,6 +41,8 @@ input:focus{
   color: #b7b7b7;
   margin-bottom: 30px;
 }
+
+/* Footer Widget Styles */
 .footer-widget{
   margin-bottom: 30px;
 }

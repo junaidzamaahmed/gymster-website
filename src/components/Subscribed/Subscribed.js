@@ -2,6 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 const Subscribed = () => {
+    // Subscribed Page
     return (
         <div>
             <div className="d-flex justify-content-center align-items-center login-page-height flex-column">

@@ -4,7 +4,9 @@ import { useHistory } from 'react-router';
 import './Contact.css'
 
 const Contact = () => {
+    // History Hook
     let history = useHistory();
+    // Push when submitted
     const handleSubmitClick = () => {
         history.push('/submitted')
     }

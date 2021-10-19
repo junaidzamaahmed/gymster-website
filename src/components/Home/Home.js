@@ -11,6 +11,8 @@ import './Home.css';
 const Home = () => {
     return (
         <div id="home">
+
+            {/* Banner Carousel */}
             <Carousel fade>
                 <Carousel.Item>
                     <img
@@ -53,6 +55,8 @@ const Home = () => {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
+
+            {/* Sections */}
             <Services></Services>
             <Plans></Plans>
             <About></About>

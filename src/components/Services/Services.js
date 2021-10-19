@@ -7,6 +7,7 @@ import "./Services.css";
 
 const Services = () => {
     const {services}=useServices();
+    // Services JSX
     return (
         <div className="my-5" id="services">
             <h2 className="text-center py-5 fs-1"><span className="border-bottom text-light">Our Services</span></h2>

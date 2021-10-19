@@ -1,11 +1,15 @@
+/* Banner Heading */
 .banner-text{
     text-align: start;
     text-shadow: black 10px 0 10px;
 }
+
+/* Grayscale */
 .gray-scale{
     filter: grayscale(80%);
 }
 
+/* Media Queries for Phone Responsiveness */
 
 @media only screen and (min-width:1200px) {
     .banner-text{

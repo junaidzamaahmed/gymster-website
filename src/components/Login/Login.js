@@ -8,18 +8,23 @@ import './Login.css';
 
 const Login = () => {
     const { signInWithGoogle, createAccount, signIn } = useAuth();
-
+    
+    // Hooks
     const [isLogin, setIsLogin] = useState(false);
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [name, setName] = useState('');
 
+    // Link hooks
     const location = useLocation();
     const redirected_url = location.state?.from || '/'
 
+    // Toggle Signup and Login
     const toggleLogin = (e) => {
         setIsLogin(e.target.checked)
     }
+
+    // Input Handlers
     const handleNameInput = e => {
         setName(e.target.value)
     }
@@ -29,6 +34,8 @@ const Login = () => {
     const handleEmailInput = e => {
         setEmail(e.target.value)
     }
+
+    // Submit Handler
     const handleSubmit = e => {
         e.preventDefault()
         if(isLogin){

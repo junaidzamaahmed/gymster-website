@@ -7,7 +7,7 @@ import { NavHashLink } from 'react-router-hash-link';
 import useAuth from '../../hooks/useAuth';
 
 const Navigation = () => {
-    const { user, logOut} = useAuth();
+    const { user, logOut } = useAuth();
     return (
         <>
             <Navbar expand="lg" variant="dark" className="w-100 absolute pt-4">

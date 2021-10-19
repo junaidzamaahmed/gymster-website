@@ -13,6 +13,7 @@ const Footer = () => {
                         <div className="col-lg-3 col-md-6 col-sm-6">
                             <div className="footer-about">
                                 <div className="footer-logo text-light fs-2">
+                                     {/* Gymster Logo */}
                                     <img src={logo} alt="" />GYMSTER
                                 </div>
                                 <p className="footer-p">The Customer is at the heart of our unique bussiness model, which include design.</p>
@@ -22,6 +23,7 @@ const Footer = () => {
 
                         <div className="col-lg-2 offset-lg-1 col-md-3 col-sm-6">
                             <div className="footer-widget">
+                                {/* Social Media Links */}
                                 <h6>Social Media</h6>
                                 <ul>
                                     <li><a className="footer-anchor" target="_blank" rel="noreferrer" href="https://www.facebook.com/ItzXunaid/"><i className="fab fa-facebook-f"></i> Facebook</a></li>
@@ -35,6 +37,7 @@ const Footer = () => {
 
                         <div className="col-lg-2  col-md-3 col-sm-6">
                             <div className="footer-widget">
+                                {/* NavLinks */}
                                 <h6>Links</h6>
                                 <ul>
                                     <li><NavHashLink className="footer-anchor" to="/home#home">Home</NavHashLink></li>
@@ -45,6 +48,7 @@ const Footer = () => {
                             </div>
                         </div>
 
+                        {/* Newsletter */}
                         <div className="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
                             <div className="footer-widget">
                                 <h6>NewsLetter</h6>

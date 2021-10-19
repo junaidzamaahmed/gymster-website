@@ -3,6 +3,7 @@ import React from 'react';
 const About = () => {
     return (
         <div className="py-5" id="about">
+            {/* Heading */}
             <h2 className="text-center py-5 fs-1"><span className="border-bottom text-light">About Us</span></h2>
             <div className="container text-light text-center w-50">
                 <h4 className="fw-bold my-3">#NO JUDGEMENTS!</h4>

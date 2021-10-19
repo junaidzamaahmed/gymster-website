@@ -4,7 +4,11 @@ import { useHistory } from 'react-router';
 import "./Plans.css";
 
 const Plans = () => {
+
+    // Hooks
     let history = useHistory();
+
+    // Purchase click handler
     const handlePurchaseClick = () => {
         history.push('/subscribed')
     }
