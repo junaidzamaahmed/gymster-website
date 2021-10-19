@@ -47,7 +47,6 @@ const useFirebase = () => {
                 swal("Congratulations!", "Successfully signed in!", "success");
             })
             .catch((error) => {
-                const errorCode = error.code;
                 swal("Oops!", `${error.message}`, "error");
             });
     }
