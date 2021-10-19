@@ -11,6 +11,7 @@ import Plans from './components/Plans/Plans';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import Services from './components/Services/Services';
 import AuthProvider from './context/AuthProvider';
+import swal from 'sweetalert';
 
 function App() {
   return (

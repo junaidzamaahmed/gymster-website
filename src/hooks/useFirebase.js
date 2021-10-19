@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged  } from "firebase/auth";
 import initializeAuthentication from '../Firebase/firebase.init';
+import swal from 'sweetalert';
 
 
 initializeAuthentication()
@@ -15,9 +16,11 @@ const signInWithGoogle = () => {
       .then(result => {
         setUser(result.user)
         console.log(result.user)
+        swal("Great!", "You've successfully signed in!", "success");
       })
       .catch(error => {
         console.log(error.message);
+        swal("Oops!", `${error.message}`, "error");
       })
   }
 
@@ -26,6 +29,7 @@ const logOut =()=>{
     signOut(auth).then(() => {
         // Sign-out successful.
         setUser({})
+        swal("Great!", "You've successfully logged out!", "success");
       }).catch((error) => {
         // An error happened.
       });
