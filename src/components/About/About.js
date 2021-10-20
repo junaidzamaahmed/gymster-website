@@ -5,7 +5,7 @@ const About = () => {
         <div className="py-5" id="about">
             {/* Heading */}
             <h2 className="text-center py-5 fs-1"><span className="border-bottom text-light">About Us</span></h2>
-            <div className="container text-light text-center w-50">
+            <div className="container text-light text-center">
                 <h4 className="fw-bold my-3">#NO JUDGEMENTS!</h4>
                 <p>Some may call it a tagline, but for us, it’s a way of life. It’s our Monday-thru-every-day mantra. An unfiltered philosophy that drives us to create a community and a gym for all. <br />
                     No judgments means room for everyone, regardless of shape, size, age, race, gender or fitness level. No matter your workout of choice, we want you to feel good while reaching your goals. Join the fun.</p>
