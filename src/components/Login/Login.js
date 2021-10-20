@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useLocation } from 'react-router';
+import { useHistory, useLocation } from 'react-router';
 import useAuth from '../../hooks/useAuth';
 import './Login.css';
 
@@ -8,7 +8,7 @@ import './Login.css';
 
 const Login = () => {
     const { signInWithGoogle, createAccount, signIn } = useAuth();
-    
+
     // Hooks
     const [isLogin, setIsLogin] = useState(false);
     const [email, setEmail] = useState('');
@@ -16,6 +16,7 @@ const Login = () => {
     const [name, setName] = useState('');
 
     // Link hooks
+    const history = useHistory();
     const location = useLocation();
     const redirected_url = location.state?.from || '/'
 
@@ -38,23 +39,23 @@ const Login = () => {
     // Submit Handler
     const handleSubmit = e => {
         e.preventDefault()
-        if(isLogin){
-            createAccount(email,password,name,redirected_url)
+        if (isLogin) {
+            createAccount(email, password, name, redirected_url, history)
         }
-        else{
-            signIn(email,password)
+        else {
+            signIn(email, password, redirected_url, history)
         }
     }
     return (
         <div className="d-flex justify-content-center align-items-center login-page-height">
             <div className="card-border-primary login-box text-light p-5 rounded">
-                <h2 className="text-center py-3 fs-2"><span className="border-bottom text-light">Login</span></h2>
+                <h2 className="text-center py-3 fs-2"><span className="border-bottom text-light">{isLogin ? 'Register' : 'Login'}</span></h2>
                 <Form onSubmit={handleSubmit}>
                     {isLogin &&
                         <Form.Group className="mb-3">
-                        <Form.Label>Full Name</Form.Label>
-                        <Form.Control onChange={handleNameInput} required className="bg-black rounded-pill text-light" type="text" placeholder="Enter your name" />
-                    </Form.Group>}
+                            <Form.Label>Full Name</Form.Label>
+                            <Form.Control onChange={handleNameInput} required className="bg-black rounded-pill text-light" type="text" placeholder="Enter your name" />
+                        </Form.Group>}
 
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
@@ -82,7 +83,7 @@ const Login = () => {
                     <Button
                         className="primary-background button text-light text-decoration-none px-4 py-2 rounded-pill nav-item"
                         type="submit"
-                        onClick={signInWithGoogle}
+                        onClick={() => signInWithGoogle(redirected_url, history)}
                     >
                         <i className="fab fa-google"></i> Sign In With Google
                     </Button>

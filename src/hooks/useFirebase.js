@@ -15,14 +15,14 @@ const useFirebase = () => {
     const googleProvider = new GoogleAuthProvider();
 
     // Email Password Account register
-    const createAccount = (email, password, name, redirected_url) => {
+    const createAccount = (email, password, name, redirected_url, history) => {
         setIsLoading(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 setUser(result.user);
                 updateUserName(name);
-                // console.log(result.user);
                 swal("Congratulations!", "Account creation successful!", "success");
+                history.push(redirected_url)
             })
             .catch((error) => {
                 swal("Oops!", `${error.message}`, "error");
@@ -43,13 +43,14 @@ const useFirebase = () => {
     }
 
     // Email Password Sign In
-    const signIn = (email, password) => {
+    const signIn = (email, password, redirected_url, history) => {
         setIsLoading(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 // Signed in 
                 setUser(result.user);
                 swal("Congratulations!", "Successfully signed in!", "success");
+                history.push(redirected_url)
             })
             .catch((error) => {
                 swal("Oops!", `${error.message}`, "error");
@@ -59,12 +60,13 @@ const useFirebase = () => {
 
 
     // Google Sign In
-    const signInWithGoogle = () => {
+    const signInWithGoogle = (redirected_url, history) => {
         setIsLoading(true)
         signInWithPopup(auth, googleProvider)
             .then(result => {
                 setUser(result.user)
                 swal("Great!", "You've successfully signed in!", "success");
+                history.push(redirected_url)
             })
             .catch(error => {
                 swal("Oops!", `${error.message}`, "error");
