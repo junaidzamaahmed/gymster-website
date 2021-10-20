@@ -23,6 +23,7 @@ const useFirebase = () => {
                 updateUserName(name);
                 swal("Congratulations!", "Account creation successful!", "success");
                 history.push(redirected_url)
+                window.location.reload()
             })
             .catch((error) => {
                 swal("Oops!", `${error.message}`, "error");
